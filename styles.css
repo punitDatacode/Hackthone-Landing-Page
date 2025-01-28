@@ -1,0 +1,162 @@
+/* Social Media - Fixed at Bottom Right */
+.social-media-bottom {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.social-media-bottom a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.social-media-bottom a:hover {
+    background: var(--primary-color, #007BFF);
+    color: white;
+}
+
+/* Responsive: Hide on Small Screens */
+@media (max-width: 480px) {
+    .social-media-bottom {
+        flex-direction: row;
+        bottom: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+
+    .social-media-bottom a {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+}
+
+body {
+    background: url('./2860.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire screen */
+    margin: 0;
+    padding: 0;
+}
+
+.timer {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+@media (max-width: 480px) {
+    .timer {
+        top: 20px;
+        right: 10px;
+    }
+}
+
+/* Vertical Navigation */
+.vertical-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px; /* Adjust width */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical-nav .logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.vertical-nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.vertical-nav ul li {
+    width: 100%;
+    padding: 12px 0;
+}
+
+.vertical-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    transition: background 0.3s ease-in-out;
+}
+
+.vertical-nav ul li a:hover {
+    background: var(--primary-color, #007BFF);
+    color: white;
+}
+
+/* Adjust content to prevent overlap */
+body {
+    margin-left: 220px; /* Push content to the right */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vertical-nav {
+        width: 180px;
+    }
+
+    body {
+        margin-left: 180px;
+    }
+
+    .vertical-nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vertical-nav {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+    }
+
+    .vertical-nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .vertical-nav ul li {
+        padding: 10px;
+    }
+
+    body {
+        margin-left: 0;
+        margin-top: 60px; /* Space for the nav */
+    }
+}
