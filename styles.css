@@ -6,7 +6,7 @@ body {
 }
 
 .hero-section {
-    background: url('h1.jpg') no-repeat center center/cover;
+    background: url('h2.jpg') no-repeat center center/cover;
     padding: 100px 0;
     height: 100vh;
     display: flex;
